@@ -1,0 +1,359 @@
+body {
+    color: #fff;
+    background-color: #222;
+	background: url(../design/charcoal.gif); /* fixed macht die Performance kaputt... */
+    font-family: 'Indie Flower', 'Lucida Grande', Helvetica, Arial, Verdana, Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+
+    margin: 0;
+    padding: 0;
+    min-width: 1380px; /* 100px + 880px + 400px */
+
+	text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+    -o-text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+    -ms-text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+    -moz-text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+    -webkit-text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    border: 0;
+}
+
+h1, h2 {
+    text-align: center;
+}
+h1 {
+	font-size: 200%;
+}
+h2 {
+	font-size: 120%;
+	font-weight: normal;
+}
+
+/* Alle CSS Transformationen blenden wir mit 1/4s ein und aus... */
+.anim {
+    transition:all 0.25s ease-in-out;    
+    -o-transition:all 0.25s ease-in-out;
+    -ms-transition:all 0.25s ease-in-out;
+    -moz-transition:all 0.25s ease-in-out;
+    -webkit-transition:all 0.25s ease-in-out;
+}
+
+#gmap {
+	width: 640px;
+	height: 480px;
+	margin: 0 auto;
+    border: 3px solid #fff;
+    border-radius: 3px;
+	
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.75);
+    -o-box-shadow: 1px 1px 10px rgba(0,0,0,0.75);
+    -ms-box-shadow: 1px 1px 10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 10px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 1px 10px rgba(0,0,0,0.75);
+}
+#gmap div { /* Info am Marker... */
+	color: #000;
+}
+#gmap img {
+	cursor: pointer;
+}
+
+div.wrapper {
+    width: 880px;
+    margin: 0 0 0 100px;
+    float: left;
+}
+div.detail {
+    min-width: 1024px;
+    margin: 0 auto;
+}
+div.map,
+div.video,
+div.download,
+div.ribbon,
+div.footer {
+	clear: both;
+	text-align: center;
+}
+div.map,
+div.download,
+div.video,
+div.footer {
+	padding: 30px 0 0 0;
+}
+div.footer p {
+	color: #f00;
+}
+
+ul.gallery {
+    list-style: none;
+    margin: 50px auto;
+}
+ul.gallery li {
+    float: left;
+    padding: 0;
+    background-color: #fff;
+}
+
+.polaroids li {
+    border: 3px solid #fff;
+    border-bottom: 20px solid #fff;
+    border-radius: 3px;
+    margin: 5px;
+    position: relative;
+    width: 150px;
+    height: 150px;
+
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.75);
+    -o-box-shadow: 1px 1px 10px rgba(0,0,0,0.75);
+    -ms-box-shadow: 1px 1px 10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 10px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 1px 10px rgba(0,0,0,0.75);
+}
+.polaroids li:nth-child(4n+1) {
+    transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -webkit-transform: rotate(-3deg);
+}
+.polaroids li:nth-child(4n+2) {
+    transform: rotate(2deg);
+    -o-transform: rotate(2deg);
+    -ms-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
+}
+.polaroids li:nth-child(4n+3) {
+    transform: rotate(6deg);
+    -o-transform: rotate(6deg);
+    -ms-transform: rotate(6deg);
+    -moz-transform: rotate(6deg);
+    -webkit-transform: rotate(6deg);
+}
+.polaroids li:nth-child(4n+4) {
+    transform: rotate(-2deg);
+    -o-transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+    -webkit-transform: rotate(-2deg);
+}
+.polaroids li:hover {
+    z-index: 100;
+
+	/* Die Thumbsnails drehen wir beim MouseOver gerade und vergrößern sie ein wenig. */
+    transform: scale(1.3, 1.3);
+    -o-transform: scale(1.3, 1.3);
+    -ms-transform: scale(1.3, 1.3);
+    -moz-transform: scale(1.3, 1.3);
+    -webkit-transform: scale(1.3, 1.3);
+}
+
+.polaroids span {
+	color: #555;
+	position: absolute;
+	bottom: -22px;
+	text-align: center;
+	width: 150px;
+	font-size: 16px;
+}
+
+.polaroids img {
+    max-width: 225px;
+    max-height: 225px;
+    position: absolute;
+    clip: rect(0 150px 150px 0);
+}
+
+div.download a img {
+	width: 100px;
+	height: 100px;
+	margin: 0 0 50px 0;
+}
+div.download a:hover img {
+	/* Das Icon beim MouseOver von 100px auf 128px vergrößern. */
+    transform: scale(1.28, 1.28);
+    -o-transform: scale(1.28, 1.28);
+    -ms-transform: scale(1.28, 1.28);
+    -moz-transform: scale(1.28, 1.28);
+    -webkit-transform: scale(1.28, 1.28);
+}
+
+div.video video {
+    border: 3px solid #fff;
+    border-radius: 3px;
+	max-width: 800px;
+	display: block;
+	margin: 20px auto;
+	
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.75);
+    -o-box-shadow: 1px 1px 10px rgba(0,0,0,0.75);
+    -ms-box-shadow: 1px 1px 10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 10px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 1px 10px rgba(0,0,0,0.75);
+}
+
+div.ribbon {
+	position: absolute;
+	top: 68px;
+	left: -60px;
+	width: 300px;
+
+    transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+div.ribbon span {
+	display: block;
+	padding: 3px;
+
+	background-color: #c00;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#a00), to(#f00)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #a00, #f00); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #a00, #f00); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #a00, #f00); /* IE10 */
+	background-image:      -o-linear-gradient(top, #a00, #f00); /* Opera 11.10+ */
+	background-image:         linear-gradient(to bottom, #a00, #f00);
+
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.75);
+    -o-box-shadow: 1px 1px 10px rgba(0,0,0,0.75);
+    -ms-box-shadow: 1px 1px 10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 10px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 1px 10px rgba(0,0,0,0.75);
+}
+
+.polaroid {
+	text-align: center;
+}
+.polaroid a {
+	font-family: "Arial Black", Arial, Verdana, Tahoma, Helvetica;
+	font-size: 80px;
+	text-decoration: none;	
+	margin: 200px 30px;
+	color: rgba(255,255,255,0.25);
+}
+.polaroid a:hover {
+	color: rgba(255,255,255,0.75);
+}
+.polaroid a.prev {
+	float: left;
+}
+.polaroid a.next {
+	float: right;
+}
+.polaroid img {
+	display: block;
+    margin: 0 auto;
+    border: 5px solid #fff;
+    border-bottom: 40px solid #fff;
+    border-radius: 5px;
+    max-width: 80%;
+    max-height: 80%;
+	
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.75);
+    -o-box-shadow: 1px 1px 10px rgba(0,0,0,0.75);
+    -ms-box-shadow: 1px 1px 10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 10px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 1px 10px rgba(0,0,0,0.75);
+}
+.polaroid span {
+	color: #333;
+	position: relative;
+	bottom: 33px;
+	text-align: center;
+	width: 100%;
+	font-size: 20px;
+}
+
+/* Der FireFox ignoriert hartnäckig das max-height... weshalb wir hier das DIV auf eine passende Größe zwingen. */
+@-moz-document url-prefix() {
+	.polaroid { height:  800px; }
+}
+/* Das Gleiche beim Opera... hier ein etwas seltsamer Hack: http://stackoverflow.com/a/1280454/173689 */
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
+	.polaroid { height:  800px; }
+}
+
+.comments {
+    float: right;
+    margin-top: 10px;
+    padding: 0;
+    max-width: 400px;
+}
+.comments ol {
+    list-style-type: none;
+}
+.comments ol li {
+    margin: 10px 0;
+}
+.comments ol li label,
+.comments ol li time {
+    font-size: 120%;
+    white-space: nowrap;
+}
+.comments ol li label {
+    font-weight: bold;
+    margin-left: 10px;
+}
+.comments ol li time,
+.comments ol li span {
+    color: #aaa;
+}
+.comments ol li span {
+    display: block;
+    margin-left: 10px;
+}
+.comments ol li p {
+    padding: 5px 10px;
+    margin: 0;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 5px 0 0 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+.comments a {
+    color: #f00;
+    float: right;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.comments textarea,
+.comments input {
+    color: #fff;
+    margin: 3px;
+    padding: 5px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 3px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+.comments textarea,
+.comments input[type="text"] {
+    width: 315px;
+}
+.comments textarea {
+    height: 50px;
+}
+.comments input[type="submit"] {
+    float: right;
+    cursor: pointer;
+}
+.comments h2 {
+    margin: 5px 0;
+}
+.comments form {
+    margin: 20px 20px 20px 50px;
+}
