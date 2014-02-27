@@ -1,0 +1,5 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^show/([a-zA-Z0-9]+)/? index.php?gallery=$1
+RewriteRule ^detail/([a-zA-Z0-9]+)/([A-Za-z0-9\ _.-]+)/? detail.php?gallery=$1&file=$2
+</IfModule>
