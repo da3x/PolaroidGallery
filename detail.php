@@ -52,7 +52,7 @@
 			$zipPath	 = "$dirname/Archiv.zip";
 
 			$markers     = "";
-			$gmapmarkers = "gmap.addMarker({ lat: 52.49902, lng: 13.47913, title: 'Home', infoWindow: { content: '<p>Home sweet Home...</p>' } });\n";
+			$gmapmarkers = "gmap.addMarker({ lat: 52.30, lng: 13.25, title: 'Home', infoWindow: { content: '<p>Home sweet Home...</p>' } });\n";
 			$lat         = exif_lat($path);
 			$lon         = exif_lon($path);
 			if ($lat != 0 && $lon != 0) {
@@ -139,8 +139,8 @@
 			function activateMap() {
 				var gmap = new GMaps({
 					div: '#gmap',
-					lat: 52.49902,
-					lng: 13.47913
+					lat: 52.30,
+					lng: 13.25
 				});
 				<?php echo($gmapmarkers); ?>
 				gmap.fitZoom();

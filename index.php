@@ -26,7 +26,7 @@
 			<ul class="gallery polaroids">
 <?php
 		$markers = "";
-		$gmapmarkers = "gmap.addMarker({ lat: 52.49902, lng: 13.47913, title: 'Home', infoWindow: { content: '<p>Home sweet Home...</p>' } });\n";
+		$gmapmarkers = "gmap.addMarker({ lat: 52.30, lng: 13.25, title: 'Home', infoWindow: { content: '<p>Home sweet Home...</p>' } });\n";
 		foreach ($files as $path) {
 			$pathinfo	 = pathinfo($path);
 			$dirname	 = $pathinfo['dirname'];

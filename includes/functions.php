@@ -37,10 +37,10 @@
 		}
 
 		// Einige bekannte User übersetzen wir direkt...
-		if ($key == "User50a6c8f0db12e") return "Daniel Bleisteiner"; // MacBook, Chrome
-		if ($key == "User50a9d854e697c") return "Daniel Bleisteiner"; // iMac, Chrome, ECG
-		if ($key == "User50a6ceb23baf5") return "Matthias Wappler";
-		if ($key == "User50a7c6e057c59") return "Anita Bleisteiner";
+		if ($key == "User50a6c8f0db12e") return "Mister X"; // MacBook, Chrome
+		if ($key == "User50a9d854e697c") return "Mister Y"; // iMac, Chrome, ECG
+		if ($key == "User50a6ceb23baf5") return "John Doe";
+		if ($key == "User50a7c6e057c59") return "Somene else";
 
 		// Wenn es keine solchen Sonder-Texte gibt, greifen die defaults...
 		if ($lang == "de") {

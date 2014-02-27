@@ -3,8 +3,8 @@
 	// Ich nutze PushOver, um mir bestimmte Events anzusagen...
 	function push($message) {
 		$url   = "https://api.pushover.net/1/messages.json";
-		$token = "dTq6LV7vqSJzHPShSU25D64EJDvvZu";
-		$user  = "ZIoa6kHrGUsO3nt2C1CMEIS4iZsn9u";
+		$token = "abcdefghijklmnopqrstuvwxyz";
+		$user  = "abcdefghijklmnopqrstuvwxyz";
 		$loc   = str("title") ." | ". getTimeSpan() ." — ";
 		// Anscheind testet PushOver die übergebene URL und löst damit eine Endlos-Schleife aus...
 		// $url   = "http://gallery.da3x.de/show/".$_GET['gallery'];
