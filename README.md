@@ -3,6 +3,8 @@ PolaroidGallery
 
 A simple polaroid style gallery using PHP, HTML, CSS and some JavaScript which integrates Google Maps and HTML5 video.
 
+![Screenshot](screenshot.png)
+
 See [http://gallery.da3x.de/show/example](http://gallery.da3x.de/show/example) for a quick preview.
 
 ## Introduction
